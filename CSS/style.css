@@ -1,0 +1,344 @@
+/* ESTILOS GENERALES */
+body {
+  background-color: #141414;
+  color: #e5e5e5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 3rem auto;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* BOTÓN MODO DÍA/NOCHE */
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  border: none;
+  background: #e50914;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.toggle-btn:hover {
+  background: #b20710;
+  transform: scale(1.1);
+}
+
+/* MODO CLARO  */
+body.modoClaro {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.modoClaro h1,
+body.modoClaro h2,
+body.modoClaro strong {
+  color: #111;
+}
+
+/* Formularios en modo claro */
+body.modoClaro .resenaForm {
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.modoClaro .resenaForm input,
+body.modoClaro .resenaForm textarea {
+  background: #f9f9f9;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+/* Awesomplete en modo claro */
+body.modoClaro .awesomplete ul {
+  background: #fff;
+  border-color: #ccc;
+}
+
+body.modoClaro .awesomplete li {
+  color: #111;
+}
+
+body.modoClaro .awesomplete li:hover,
+body.modoClaro .awesomplete li[aria-selected="true"] {
+  background: #e50914;
+  color: #fff;
+}
+
+/* Tarjetas en modo claro */
+body.modoClaro .peliculas-card {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.modoClaro .peliculas-card h3,
+body.modoClaro .peliculas-card p strong {
+  color: #111;
+}
+
+body.modoClaro .peliculas-card .puntaje {
+  color: #e50914;
+}
+
+body.modoClaro .ver-mas-btn {
+  color: #e50914;
+}
+
+/* FORMULARIO DE RESEÑA */
+.resenaForm {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #1e1e1e;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resenaForm h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.resenaForm input,
+.resenaForm textarea {
+  padding: 0.9rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #2b2b2b;
+  color: #e5e5e5;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.resenaForm input:focus,
+.resenaForm textarea:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+  background: #1e1e1e;
+  outline: none;
+}
+
+.resenaForm textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Mesajes de validaciones */
+#errorBox {
+  position: fixed;
+  top: 20px;
+  right: 10%;
+  padding: 1rem 1.5rem;
+  background: #e50914;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* AUTOCOMPLETADO (AWESOMPLETE) */
+.awesomplete ul {
+  background: #2b2b2b;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 0;
+  margin-top: 5px;
+}
+
+.awesomplete li {
+  color: #e5e5e5;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.awesomplete li:hover,
+.awesomplete li[aria-selected="true"] {
+  background: #e50914;
+  color: #fff;
+}
+
+.awesomplete mark {
+  background-color: transparent;
+  color: #ff7033;
+  font-weight: 700;
+}
+
+/* BOTONES */
+.btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #e50914;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #b20710;
+  transform: translateY(-2px);
+}
+
+/* Botón "Ver más" */
+.ver-mas-btn {
+  background-color: transparent;
+  border: none;
+  color: #ffaa33;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.ver-mas-btn:hover {
+  text-decoration: underline;
+}
+
+/* LISTADO DE PELÍCULAS */
+#movieList {
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+/* TARJETAS DE PELÍCULAS */
+.peliculas-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  width: 30rem;
+  min-width: 28rem;
+  height: 100%;
+}
+
+.peliculas-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.peliculas-card .poster {
+  width: 60%;
+  margin: auto;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  padding-top: 1rem;
+}
+
+.info-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.peliculas-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.peliculas-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.peliculas-card p strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.peliculas-card .puntaje {
+  color: #ffaa33;
+  font-weight: 700;
+}
+
+.peliculas-card .review,
+.peliculas-card .sinopsis {
+  color: #a3a3a3;
+}
+
+/* Botón eliminar dentro de la tarjeta */
+.peliculas-card .btn {
+  background-color: transparent;
+  color: #ff4757;
+  border: 1px solid #ff4757;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.peliculas-card .btn:hover {
+  background-color: #ff4757;
+  color: #fff;
+  transform: none;
+}
+
+/* ver mas*/
+.colapsable {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

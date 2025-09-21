@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Reseñas de Películas</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/2798/2798007.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/awesomplete@1.1.5/awesomplete.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/awesomplete@1.1.5/awesomplete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Modo calro/oscruo-->
+    <button id="toggleMode" class="toggle-btn">🌙</button>
+
+    <!-- formulario -->
+    <div class="resenaForm">
+      <h2>Agregar Nueva Reseña</h2>
+      <input type="text" id="inputTitle" placeholder="Título de la película:" />
+      <input type="text" id="inputPoints" placeholder="Puntaje del 1 al 10:" />
+      <textarea id="inputReview" placeholder="Escribí tu reseña:"></textarea>
+      <button id="btnAddMovie" class="btn">Agregar Reseña</button>
+    </div>
+
+    <!-- reseñas guardadas -->
+    <h1>Mis Reseñas</h1>
+    <div id="movieList"></div>
+
+    <!-- JavaScript -->
+    <script src="./JS/entrega2.js"></script>
+  </body>
+</html>
