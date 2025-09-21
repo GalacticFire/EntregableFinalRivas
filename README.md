@@ -14,3 +14,8 @@ Validación de formularios: Antes de guardar una película, ahora se valida que 
 Información extendida en la tarjeta: Las tarjetas de películas ahora muestran el póster, la sinopsis y el año de estreno.
 
 Tarjetas expandibles: Se añadió un botón "Ver más" que permite expandir la reseña y la sinopsis si son demasiado largas.
+
+https://entregable-final-rivas.vercel.app/
+
+<img width="1872" height="1511" alt="Mis Reseñas De peliculas dark" src="https://github.com/user-attachments/assets/93106707-34b7-469e-8690-60d358c48b71" />
+<img width="1872" height="1511" alt="Mis Reseñas De peliculas claro" src="https://github.com/user-attachments/assets/cb703dae-6052-4d04-ac7d-ae4c99b38e9e" />
